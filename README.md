@@ -71,6 +71,11 @@ To start from zero instead of from my answers, delete the four files in `00-EXEC
 - Contract and SMS-consent material the loops produce are drafts. Have a qualified attorney
   review them before you use them with a real client.
 
+## License
+
+MIT. See [LICENSE](LICENSE). Use it, change it, sell what you build with it. Just keep the
+copyright notice in copies of this repo.
+
 ## Rules the script enforces
 
 - Never fabricate data, testimonials or results. Label assumptions as assumptions.
