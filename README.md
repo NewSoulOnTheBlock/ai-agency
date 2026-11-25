@@ -38,9 +38,8 @@ minute on it. If it's bad, you'll know, and you lost nothing.
 forked for dentists, law firms or landscapers. Someone who finds a broken step can fix it and
 send the fix back. Every person who runs a loop is testing it for the next person.
 
-**It keeps me honest.** I can't hide untested prices or made-up results behind a paywall. The
-"Honest status" section below exists because anyone can open `00-EXECUTIVE/STATE.md` and see
-exactly how far this has really got.
+**It keeps me honest.** I can't hide untested prices or made-up results behind a paywall. Anyone
+can open `00-EXECUTIVE/STATE.md` and see exactly how far this has really got.
 
 **AI changed the maths.** A model can write a plan like this in an afternoon. Selling access to
 text that a machine can regenerate is a business with a short life. Giving the text away and
@@ -143,15 +142,6 @@ Each run does the same four things:
 | 13 | Outreach system | Email sequence, call scripts, compliance checklist, 10 drafts |
 | 14 | Close and deliver client #1 | Proposal, onboarding, implementation, handover |
 | 15 | Measure, report, expand | KPI scorecard, client reports, the next division to open |
-
-## Honest status
-
-- This is a plan, not a proven business. Loop 1 is done and Loop 2 is partly done. Loops 3–15
-  are prompts that have not been run yet.
-- The prices, margins and pain points are untested assumptions. `00-EXECUTIVE/STATE.md` lists the open issues.
-- There are no results, testimonials or revenue numbers here, because there aren't any yet.
-- Contract and SMS-consent material the loops produce are drafts. Have a qualified attorney
-  review them before you use them with a real client.
 
 ## License
 
