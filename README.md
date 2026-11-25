@@ -59,7 +59,7 @@ door. If the script helped you, $AGENCY is how you say so. If it didn't, you owe
 ### Set up
 
 ```
-git clone <this-repo-url> ~/dev/ai-agency
+git clone https://github.com/NewSoulOnTheBlock/ai-agency.git ~/dev/ai-agency
 cd ~/dev/ai-agency
 claude
 ```
