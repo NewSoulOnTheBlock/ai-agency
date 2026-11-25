@@ -19,7 +19,7 @@ no upsell, no course.
 
 **If it was useful or valuable to you, buy the token. Thanks.**
 
-> Token: **$AGENCY** — contract address: `PASTE-CONTRACT-ADDRESS-HERE`
+> Token: **$AGENCY** — contract address: `GKmiiKzFcZEvzr5p1wKBxNToeXZNV1g9KGH9dBtPpump`
 >
 > Only trust the address written in this file, in this repo. The token is a way to say thanks.
 > It is not an investment, it gives you no rights to anything, and nothing here is financial advice.
