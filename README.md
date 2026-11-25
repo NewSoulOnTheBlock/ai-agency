@@ -17,10 +17,100 @@ no upsell, no course.
 
 **If it was useful or valuable to you, buy the token. Thanks.**
 
-> Token: `TICKER` — contract address: `PASTE-CONTRACT-ADDRESS-HERE`
+> Token: **$AGENCY** — contract address: `PASTE-CONTRACT-ADDRESS-HERE`
 >
 > Only trust the address written in this file, in this repo. The token is a way to say thanks.
 > It is not an investment, it gives you no rights to anything, and nothing here is financial advice.
+
+## Why open source is the right way to do this
+
+**The information was never the scarce part.** A $29.99 PDF sells you the feeling of progress.
+What actually builds an agency is running the loops, making the calls and delivering the work.
+Charging for the plan puts the price on the wrong thing.
+
+**You can check it before you trust it.** A paid info product makes you pay first and judge
+later. Here you can read every prompt, every assumption and every open issue before you spend a
+minute on it. If it's bad, you'll know, and you lost nothing.
+
+**It gets better when people use it.** A PDF is frozen on the day it's sold. A repo can be
+forked for dentists, law firms or landscapers. Someone who finds a broken step can fix it and
+send the fix back. Every person who runs a loop is testing it for the next person.
+
+**It keeps me honest.** I can't hide untested prices or made-up results behind a paywall. The
+"Honest status" section below exists because anyone can open `00-EXECUTIVE/STATE.md` and see
+exactly how far this has really got.
+
+**AI changed the maths.** A model can write a plan like this in an afternoon. Selling access to
+text that a machine can regenerate is a business with a short life. Giving the text away and
+earning from the work, the reputation and the people who chose to back it will last longer.
+
+**You pay after the value, not before.** That's what the token is for. Nobody is charged at the
+door. If the script helped you, $AGENCY is how you say so. If it didn't, you owe nothing.
+
+## How to use the script
+
+### What you need
+
+- [Claude Code](https://claude.com/claude-code) installed and signed in.
+- Git.
+- Nothing else to start. Later loops ask for accounts (n8n, a database, an SMS sandbox, Vercel),
+  and each one stops and shows you the cost before it sets anything up.
+
+### Set up
+
+```
+git clone <this-repo-url> ~/dev/ai-agency
+cd ~/dev/ai-agency
+claude
+```
+
+The prompts assume the folder is `~/dev/ai-agency`. If you put it somewhere else, find and
+replace that path in `LOOP-PROMPTS.md`.
+
+### Run a loop
+
+Paste this runner prompt. It is the only prompt you need:
+
+```
+Read ~/dev/ai-agency/00-EXECUTIVE/STATE.md. Find the first loop whose status is not DONE,
+open ~/dev/ai-agency/LOOP-PROMPTS.md, and run that loop's prompt exactly. At the end, run
+its exit check, update STATE.md (status, files produced, decisions, open issues, next loop),
+and append decisions to 00-EXECUTIVE/Decision-Log.md. Stop after one loop.
+```
+
+Each run does the same four things:
+
+1. Reads `00-EXECUTIVE/STATE.md` to find out where the build is.
+2. Does the work for the next unfinished loop and writes the files that loop names.
+3. Runs that loop's exit check, a concrete test such as "the tenant isolation test passes
+   against a real database".
+4. Updates `STATE.md` and the decision log, then stops.
+
+### The rules that make it work
+
+- **One loop per session.** Type `/clear` before the next one. `STATE.md` carries the memory
+  between sessions, so the conversation doesn't have to.
+- **A loop is done only when its exit check passes.** If it fails, the runner prompt repeats
+  the same loop next time. Don't mark it done by hand to move on.
+- **Read the report.** Every loop ends with: objective, what it did, files produced, exit check
+  results, open issues, next loop. The open issues are where the real decisions are.
+- **You do the outward-facing parts.** Sending email, publishing, charging money and calling
+  people are drafted, never sent. You review them and send them yourself.
+- **Some loops wait for you.** Loop 5 (which CRM), Loop 6 (which hosting, and its cost) and
+  Loop 12 (which cities to prospect in) stop and ask before they go further.
+- **Loops 14 and 15 repeat.** Loop 14 runs for each active deal or client. Loop 15 runs monthly.
+
+### Make it yours
+
+- **Start from zero:** delete the four files in `00-EXECUTIVE/` (keep the README) and run the
+  runner prompt. Loop 1 will write your own positioning and offer.
+- **Change the industry:** edit the industry line and the Loop 1 context in `LOOP-PROMPTS.md`
+  (customer type, company size, pain points), then start from zero. The later loops build on
+  whatever Loop 1 produces.
+- **Change the prices:** edit the offer ladder in Loop 1. Loop 4 checks the margins and flags
+  any package under 60%.
+- **Swap the tools:** Loop 5 assumes a CRM I already had (Alfred). Use your own, or HubSpot's
+  free CRM. n8n, Supabase, Calendly and Vercel can all be replaced the same way.
 
 ## What's in here
 
@@ -30,17 +120,7 @@ no upsell, no course.
 | `agencyscript.md` | The same script under its original name. |
 | `00-EXECUTIVE/` | Loop 1's real output: positioning, offer ladder, state tracker, decision log. |
 | `01-SALES/` … `09-CLIENTS/` | The folder outline the script asks for. Each folder has a README saying what goes there and who owns it. |
-
-## How to use it
-
-1. Clone the repo to `~/dev/ai-agency` (or change that path in the prompts).
-2. Open Claude Code in the folder and paste the runner prompt from the top of `LOOP-PROMPTS.md`.
-3. Run one loop per session, and `/clear` between loops.
-4. A loop is done only when its exit check passes. If it fails, the next run repeats that loop.
-5. Anything outward-facing (sending email, publishing, charging money, calling) is drafted,
-   never sent. You do those yourself.
-
-To start from zero instead of from my answers, delete the four files in `00-EXECUTIVE/` and run Loop 1.
+| `LICENSE` | MIT. |
 
 ## The 15 loops
 
@@ -64,10 +144,10 @@ To start from zero instead of from my answers, delete the four files in `00-EXEC
 
 ## Honest status
 
-- This is a plan, not a proven business. Loop 1 is done. Loops 2–15 are prompts that have not been run yet.
+- This is a plan, not a proven business. Loop 1 is done and Loop 2 is partly done. Loops 3–15
+  are prompts that have not been run yet.
 - The prices, margins and pain points are untested assumptions. `00-EXECUTIVE/STATE.md` lists the open issues.
 - There are no results, testimonials or revenue numbers here, because there aren't any yet.
-- Loop 5 assumes a CRM I already had (Alfred). Swap in your own, or HubSpot's free CRM.
 - Contract and SMS-consent material the loops produce are drafts. Have a qualified attorney
   review them before you use them with a real client.
 
