@@ -1,0 +1,15 @@
+# Client data is never committed. Only the template and the shared QA checklists are tracked.
+09-CLIENTS/*/
+!09-CLIENTS/CLIENT-TEMPLATE/
+!09-CLIENTS/QA/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Tooling noise
+.boost/
+node_modules/
+.DS_Store
+Thumbs.db
