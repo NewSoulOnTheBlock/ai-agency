@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/logo.png" alt="AGENCY logo: a letter A inside an open ring" width="160"></p>
+
 # AI Business Operations Agency: the 15-Loop Build Plan
 
 A complete, step-by-step script for building an AI operations agency that serves home-services
